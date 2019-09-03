@@ -1,5 +1,5 @@
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/1342803/36623515-7293b4ec-18d3-11e8-85ab-4e2f8fb38fbd.png" width="320" alt="API Template">
+    <img src="https://user-images.githubusercontent.com/1342803/43869499-ce6ce122-9b40-11e8-8894-e0c48eabf270.png" width="320" alt="Web Template">
     <br>
     <br>
     <a href="http://docs.vapor.codes/3.0/">
@@ -11,10 +11,21 @@
     <a href="LICENSE">
         <img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" alt="MIT License">
     </a>
-    <a href="https://circleci.com/gh/vapor/api-template">
-        <img src="https://circleci.com/gh/vapor/api-template.svg?style=shield" alt="Continuous Integration">
+    <a href="https://circleci.com/gh/vapor/web-template">
+        <img src="https://circleci.com/gh/vapor/web-template.svg?style=shield" alt="Continuous Integration">
     </a>
     <a href="https://swift.org">
         <img src="http://img.shields.io/badge/swift-4.1-brightgreen.svg" alt="Swift 4.1">
     </a>
 </p>
+
+## Installation instructions
+* Grab this repo
+* Install Vapor if needed
+* run `brew tap vapor/tap`
+* run `brew install vapor/tap/vapor`
+* Export development environment variables i.e `export SOME_VARIABLE=<YOUR_KEY_HERE>`
+* Run a PostgreSQL databse instance via `Docker` using `docker run --name postgres -e POSTGRES_DB=vapor -e POSTGRES_USER=vapor -e POSTGRES_PASSWORD=password -p 5432:5432 -d postgres`.
+* run `vapor build` from inside of it
+* run `vapor run` for a hot-reloading dev server on `localhost:8080`
+* If you'd like to use Xcode as your editor, run `vapor xcode -y`. Select the `Run` scheme, use CMD+B to build & CMD+R to build + run. Edit scheme and select `Arguments` tab to add environment variables there.
